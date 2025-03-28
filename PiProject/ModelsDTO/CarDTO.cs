@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace PIApi.Models;
+namespace PiProject.Models;
 public class CarDto
 {
     public string LicensePlate { get; set; } = string.Empty;

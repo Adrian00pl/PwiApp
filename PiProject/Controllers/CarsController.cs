@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PiProject.Models;
 using Newtonsoft.Json;
-using System.Text.Encodings.Web;
-using System.Text.Json.Serialization;
-using PIApi.Models;
 
 namespace PiProject.Controllers;
 public class CarsController : Controller
@@ -35,7 +32,6 @@ public class CarsController : Controller
             modelsList = JsonConvert.DeserializeObject<List<Model>>(data) ?? new List<Model>();
         }
 
-            // Przekazanie obu list do widoku
         ViewBag.CarsList = carsList;
         ViewBag.ModelsList = modelsList;
 
@@ -54,10 +50,10 @@ public class CarsController : Controller
             var response = await _client.PostAsJsonAsync("Car", car);
             if (response.IsSuccessStatusCode)
             {
-                return RedirectToAction(nameof(Index)); // Po dodaniu przekierowujemy na stronę główną
+                return RedirectToAction(nameof(Index));
             }
         }
-        return View("Index"); // W przypadku błędu pozostajemy na tej samej stronie
+        return View("Index");
     }
 
     // Akcja do usuwania samochodu
@@ -67,8 +63,8 @@ public class CarsController : Controller
         var response = await _client.DeleteAsync($"Car/{id}");
         if (response.IsSuccessStatusCode)
         {
-            return RedirectToAction(nameof(Index)); // Po usunięciu przekierowujemy na stronę główną
+            return RedirectToAction(nameof(Index));
         }
-        return View("Index"); // W przypadku błędu pozostajemy na tej samej stronie
+        return View("Index");
     }
 }
