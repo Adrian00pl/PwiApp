@@ -36,9 +36,6 @@ public class CarsController : Controller
         ViewBag.ModelsList = modelsList;
 
         return View();
-        
-
-
     }
     
     // Akcja do dodawania nowego samochodu

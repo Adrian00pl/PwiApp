@@ -282,3 +282,4 @@ D:\VSC\PiApi\obj\Debug\net9.0\refint\PIApi.dll
 D:\VSC\PiApi\obj\Debug\net9.0\PIApi.pdb
 D:\VSC\PiApi\obj\Debug\net9.0\PIApi.genruntimeconfig.cache
 D:\VSC\PiApi\obj\Debug\net9.0\ref\PIApi.dll
+D:\VSC\PiApi\obj\Debug\net9.0\PIApi.sourcelink.json
