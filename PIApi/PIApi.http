@@ -1,0 +1,6 @@
+@PIApi_HostAddress = http://localhost:5043
+
+GET {{PIApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
